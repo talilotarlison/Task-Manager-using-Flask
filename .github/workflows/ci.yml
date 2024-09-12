@@ -1,4 +1,4 @@
-name: test
+name: tests_hdb
 
 on:
   push:
@@ -19,7 +19,7 @@ jobs:
       - name: Build the Docker image
         run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
 
-  test:
+  tests:
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -47,7 +47,7 @@ jobs:
       - name: Perform Bandit Analysis
         uses: PyCQA/bandit-action@v1
 
-  dependency_check:
+  owasp_dependency_check:
     needs: build
     runs-on: ubuntu-latest
     name: Dependency-Check
@@ -81,7 +81,7 @@ jobs:
           name: Dependency-Check report
           path: ${{github.workspace}}/reports
 
-  zap_test:
+  zed_attack_roxy_zap:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
