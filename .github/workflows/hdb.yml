@@ -1,4 +1,4 @@
-name: HdB
+name: test
 
 on:
   push:
