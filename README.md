@@ -13,7 +13,7 @@ Pipeline
 - [x] Adicionar Bandit
 - [x] Adicionar Dependency-check
 - [ ] Adicionar Etapa de "Deploy"
-- [ ] ...
+- [ ] ....
 
 # Task-Manager-using-Flask
 
